@@ -15,7 +15,9 @@ interface IUploadConfig {
   };
 
   config: {
-    disk: string;
+    disk: {
+      storage: StorageEngine;
+    };
     aws: {
       bucket: string;
     };
@@ -41,6 +43,7 @@ export default {
   },
 
   config: {
+    disk: {},
     aws: {
       bucket: 'app-gobarber-buc',
     },
